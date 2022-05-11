@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600&family=Besley:wght@400;500&display=swap" rel="stylesheet">
+    <title>Практика</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container cnt">
+            <div class="header__blocks">
+                <div class="header__block header__logo"><img src="img/logo.png" alt=""></div>
+                <div class="header__block header__menu">
+                    <nav class="menu__body">
+                        <ul class="menu__ul">
+                            <li><a href="#">All recipes</a></li>
+                        </ul>
+                        <ul class="menu__ul">
+                            <li><a href="#">Articles</a></li>
+                        </ul>
+                        <ul class="menu__ul">
+                            <li><a href="#">Popular</a></li>
+                        </ul>
+                        <ul class="menu__ul">
+                            <li><a href="#">Recipes For Easter</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="menu__body menu_buttons">
+                        <ul class="menu__ul">
+                            <li>
+                                <a href="#" class="authbtn">
+                                    <div class="header__reg">
+                                        <div class="reg__logo"><img src="img/sign_in.png" alt=""></div>
+                                        <div class="reg__text">Sign in</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__ul">
+                            <li><a href="#" class="header__recipe">Add recipe</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="header__block header__burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="main__container cnt">
+            <div class="main__crumbs">
+                <div class="crumbs__arrow"><img src="img/crumbs_arrow.svg" alt="crumbs"></div>
+                <div class="crumbs__text">All recipes / Desserts </div>
+            </div>
+            <div class="main__blocks">
+                <div class="main__block">
+                    <div class="main__slider">
+                        <div class="slider">
+                            <div class="item">
+                                <img src="img/slide_one.svg" alt="Первый слайд">
+                            </div>
+                            <div class="item">
+                                <img src="img/slide_two.svg" alt="Второй слайд">
+                            </div>
+                            <div class="item">
+                                <img src="img/slide_three.svg" alt="Третий слайд">
+                            </div>
+                            <a class="prev" onclick="minusSlide()"><img src="img/minusSlide.svg" alt=""></a>
+                            <a class="next" onclick="plusSlide()"><img src="img/plusSlide.svg" alt=""></a>
+                        </div>
+    
+                        <div class="slider__dots">
+                            <div class="dots__item" onclick="currentSlide(1)"><img src="img/slide_one.svg" alt="Первый слайд"></div>
+                            <div class="dots__item" onclick="currentSlide(2)"><img src="img/slide_two.svg" alt="Второй слайд"></div>
+                            <div class="dots__item" onclick="currentSlide(3)"><img src="img/slide_three.svg" alt="Третий слайд"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__block">
+                    <div class="main__description">
+                        <div class="description__name">BREAD MACHINE CINNAMON BUNS</div>
+                        <div class="description__rating">
+                            <div class="rating">
+                                <input type="radio" id="star-5" name="rating" value="5">
+                                <label for="star-5" title="Супер!"></label>	
+                                <input type="radio" id="star-4" name="rating" value="4">
+                                <label for="star-4" title="Хорошо!"></label>    
+                                <input type="radio" id="star-3" name="rating" value="3">
+                                <label for="star-3" title="Нормально!"></label>  
+                                <input type="radio" id="star-2" name="rating" value="2">
+                                <label for="star-2" title="Плохо!"></label>    
+                                <input type="radio" id="star-1" name="rating" value="1">
+                                <label for="star-1" title="Отвратительно!"></label>
+                            </div>
+                            <span class="rating__value">(94)</span>
+                        </div>
+                        <div class="description__cooking">
+                            <span class="cooking__value">Ready in - 15min  |  Serves - 12 persons</span>
+                        </div>
+                        <div class="description__author">
+                            <span class="author__value">made by maria narabovsky</span>
+                        </div>
+                        <div class="description__date">
+                            <span class="date__value">publication: 12/03/2022</span>
+                        </div>
+                        <div class="description__buttons">
+                            <a href="#" class="description__button">
+                                <div class="save__recipe recipe">
+                                    <img src="img/save_recipe.png" alt="save_recipe">
+                                    <span>Save Recipe</span>
+                                </div>
+                            </a>
+                            <a href="#" class="description__button">
+                                <div class="print__recipe recipe">
+                                    <img src="img/print_recipe.svg" alt="save_recipe">
+                                    <span>Print Recipe</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fullslide">
+        <div class="fullslide__container cnt">
+            <div class="slide__full__screen">
+                <div class="item">
+                    <img src="img/slide_one.svg" alt="Первый слайд">
+                </div>
+                <div class="item">
+                    <img src="img/slide_two.svg" alt="Второй слайд">
+                </div>
+                <div class="item">
+                    <img src="img/slide_three.svg" alt="Третий слайд">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="manual">
+        <div class="manual__container cnt">
+            <div class="manual__blocks">
+                <div class="manual__block ingredients">
+                    <div class="ingredients__header manual__header">INGREDIENTS</div>
+                    <div class="ingredients__content">
+                        <div class="ingredients__amount info">
+                            <span>1/5 Cup</span>
+                            <span>1 Tablespoon</span>
+                            <span>1/4 Teaspoon</span>
+                            <span>1 Tablespoon</span>
+                            <span>1/4 Teaspoon </span>
+                            <span>2</span>
+                            <span>1 Cup</span>
+                            <span>4 Tablespoon </span>
+                            <span>1/3 Teaspoon</span>
+                            <span>1/3 Cup</span>
+                        </div>
+                        <div class="ingredients__component info red">
+                            <span>Flour</span>
+                            <span>Sugar</span>
+                            <span>Cinnamon</span>
+                            <span>Baking powder</span>
+                            <span>Salt</span>
+                            <span>Eggs</span>
+                            <span>Milk</span>
+                            <span>Melted Butter</span>
+                            <span>Vanilla</span>
+                            <span>Chocolate Chips</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="manual__block directions">
+                    <div class="directions__header manual__header">DIRECTIONS</div>
+                    <div class="directions__content">
+                        <nav class="directions__menu">
+                            <ul class="directions__ul">
+                                <li>Preheat fry pan (griddle or skillet for Americans).</li>
+                                <li>Combine flour, sugar, cinnamon, baking powder and salt in a large bowl.</li>
+                                <li>Mix together wet ingredients and beat into dry mixture until smooth.</li>
+                                <li>Fold in chocolate chips.</li>
+                                <li>Pour or spoon batter into fry pan in desired quantity.</li>
+                                <li>Flip when top begins to bubble, then cook a minute more.</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="similar">
+        <div class="similar__container cnt">
+            <div class="similar__slider">
+                <div class="slider__item">
+                    <div class="carousel__wrap">
+                        <div class="slide__wrapper">
+                            <img src="img/slide_one_similar.svg" alt="">
+                            <div class="slide__header">Chocolate pancakes</div>
+                            <div class="slide__rating">
+                                <div class="rating">
+                                    <input type="radio" id="star-5" name="rating" value="5">
+                                    <label for="star-5" title="Супер!"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4">
+                                    <label for="star-4" title="Хорошо!"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3">
+                                    <label for="star-3" title="Нормально!"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2">
+                                    <label for="star-2" title="Плохо!"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1">
+                                    <label for="star-1" title="Отвратительно!"></label>
+                                </div>
+                                <span class="rating__value">(100)</span>
+                            </div>
+                            <div class="slide__desc">Officially obsessed with this recipe! The dough is SUPER easy to work with and not sticky at all, and when the buns are baked they are so incredibly fluffy!</div>
+                        </div>
+                        <div class="slide__wrapper">
+                            <img src="img/slide_two_similar.svg" alt="">
+                            <div class="slide__header">FRENCH TOAST BAKE</div>
+                            <div class="slide__rating">
+                                <div class="rating">
+                                    <input type="radio" id="star-5" name="rating" value="5">
+                                    <label for="star-5" title="Супер!"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4">
+                                    <label for="star-4" title="Хорошо!"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3">
+                                    <label for="star-3" title="Нормально!"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2">
+                                    <label for="star-2" title="Плохо!"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1">
+                                    <label for="star-1" title="Отвратительно!"></label>
+                                </div>
+                                <span class="rating__value">(127)</span>
+                            </div>
+                            <div class="slide__desc">
+                                Officially obsessed with this recipe! The dough is SUPER easy to work with and not sticky at all, and when the buns are baked they are so incredibly fluffy!
+                            </div>
+                        </div>
+                        <div class="slide__wrapper">
+                            <img src="img/slide_three_similar.svg" alt="">
+                            <div class="slide__header">CHEDDAR CHEESE SCONES</div>
+                            <div class="slide__rating">
+                                <div class="rating">
+                                    <input type="radio" id="star-5" name="rating" value="5">
+                                    <label for="star-5" title="Супер!"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4">
+                                    <label for="star-4" title="Хорошо!"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3">
+                                    <label for="star-3" title="Нормально!"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2">
+                                    <label for="star-2" title="Плохо!"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1">
+                                    <label for="star-1" title="Отвратительно!"></label>
+                                </div>
+                                <span class="rating__value">(83)</span>
+                            </div>
+                            <div class="slide__desc">
+                                Officially obsessed with this recipe! The dough is SUPER easy to work with and not sticky at all, and when the buns are baked they are so incredibly fluffy!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="carousel__wrap">
+                        <div class="slide__wrapper">
+                            <img src="img/slide_one_similar.svg" alt="">
+                            <div class="slide__header">Chocolate pancakes2</div>
+                            <div class="slide__rating">
+                                <div class="rating">
+                                    <input type="radio" id="star-5" name="rating" value="5">
+                                    <label for="star-5" title="Супер!"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4">
+                                    <label for="star-4" title="Хорошо!"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3">
+                                    <label for="star-3" title="Нормально!"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2">
+                                    <label for="star-2" title="Плохо!"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1">
+                                    <label for="star-1" title="Отвратительно!"></label>
+                                </div>
+                                <span class="rating__value">(100)</span>
+                            </div>
+                            <div class="slide__desc">Officially obsessed with this recipe! The dough is SUPER easy to work with and not sticky at all, and when the buns are baked they are so incredibly fluffy!</div>
+                        </div>
+                        <div class="slide__wrapper">
+                            <img src="img/slide_two_similar.svg" alt="">
+                            <div class="slide__header">FRENCH TOAST BAKE</div>
+                            <div class="slide__rating">
+                                <div class="rating">
+                                    <input type="radio" id="star-5" name="rating" value="5">
+                                    <label for="star-5" title="Супер!"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4">
+                                    <label for="star-4" title="Хорошо!"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3">
+                                    <label for="star-3" title="Нормально!"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2">
+                                    <label for="star-2" title="Плохо!"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1">
+                                    <label for="star-1" title="Отвратительно!"></label>
+                                </div>
+                                <span class="rating__value">(127)</span>
+                            </div>
+                            <div class="slide__desc">
+                                Officially obsessed with this recipe! The dough is SUPER easy to work with and not sticky at all, and when the buns are baked they are so incredibly fluffy!
+                            </div>
+                        </div>
+                        <div class="slide__wrapper">
+                            <img src="img/slide_three_similar.svg" alt="">
+                            <div class="slide__header">CHEDDAR CHEESE SCONES</div>
+                            <div class="slide__rating">
+                                <div class="rating">
+                                    <input type="radio" id="star-5" name="rating" value="5">
+                                    <label for="star-5" title="Супер!"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4">
+                                    <label for="star-4" title="Хорошо!"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3">
+                                    <label for="star-3" title="Нормально!"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2">
+                                    <label for="star-2" title="Плохо!"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1">
+                                    <label for="star-1" title="Отвратительно!"></label>
+                                </div>
+                                <span class="rating__value">(83)</span>
+                            </div>
+                            <div class="slide__desc">
+                                Officially obsessed with this recipe! The dough is SUPER easy to work with and not sticky at all, and when the buns are baked they are so incredibly fluffy!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="carousel__wrap">
+                        <div class="slide__wrapper">
+                            <img src="img/slide_one_similar.svg" alt="">
+                            <div class="slide__header">Chocolate pancakes 3</div>
+                            <div class="slide__rating">
+                                <div class="rating">
+                                    <input type="radio" id="star-5" name="rating" value="5">
+                                    <label for="star-5" title="Супер!"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4">
+                                    <label for="star-4" title="Хорошо!"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3">
+                                    <label for="star-3" title="Нормально!"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2">
+                                    <label for="star-2" title="Плохо!"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1">
+                                    <label for="star-1" title="Отвратительно!"></label>
+                                </div>
+                                <span class="rating__value">(100)</span>
+                            </div>
+                            <div class="slide__desc">Officially obsessed with this recipe! The dough is SUPER easy to work with and not sticky at all, and when the buns are baked they are so incredibly fluffy!</div>
+                        </div>
+                        <div class="slide__wrapper">
+                            <img src="img/slide_two_similar.svg" alt="">
+                            <div class="slide__header">FRENCH TOAST BAKE</div>
+                            <div class="slide__rating">
+                                <div class="rating">
+                                    <input type="radio" id="star-5" name="rating" value="5">
+                                    <label for="star-5" title="Супер!"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4">
+                                    <label for="star-4" title="Хорошо!"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3">
+                                    <label for="star-3" title="Нормально!"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2">
+                                    <label for="star-2" title="Плохо!"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1">
+                                    <label for="star-1" title="Отвратительно!"></label>
+                                </div>
+                                <span class="rating__value">(127)</span>
+                            </div>
+                            <div class="slide__desc">
+                                Officially obsessed with this recipe! The dough is SUPER easy to work with and not sticky at all, and when the buns are baked they are so incredibly fluffy!
+                            </div>
+                        </div>
+                        <div class="slide__wrapper">
+                            <img src="img/slide_three_similar.svg" alt="">
+                            <div class="slide__header">CHEDDAR CHEESE SCONES</div>
+                            <div class="slide__rating">
+                                <div class="rating">
+                                    <input type="radio" id="star-5" name="rating" value="5">
+                                    <label for="star-5" title="Супер!"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4">
+                                    <label for="star-4" title="Хорошо!"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3">
+                                    <label for="star-3" title="Нормально!"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2">
+                                    <label for="star-2" title="Плохо!"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1">
+                                    <label for="star-1" title="Отвратительно!"></label>
+                                </div>
+                                <span class="rating__value">(83)</span>
+                            </div>
+                            <div class="slide__desc">
+                                Officially obsessed with this recipe! The dough is SUPER easy to work with and not sticky at all, and when the buns are baked they are so incredibly fluffy!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="prev" onclick="prevSlide()"><img src="img/minusSlide.svg" alt=""></a>
+                <a class="next" onclick="nextSlide()"><img src="img/plusSlide.svg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container cnt">
+            <div class="footer__blocks">
+                <div class="footer__block">
+                    <img src="img/search.svg" alt=""><input type="text" placeholder="Search here or try our suggestions below">
+                </div>
+                <div class="footer__block">
+                    <p>
+                        © 2006-2022 <br>
+                        WEBSITE “WHEN SHE BITES”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="auth" id="auth">
+		<div class="auth__body">
+			<div class="auth__blocks">
+				<div class="auth__block">
+					<span class="close">&times;</span>
+					<h2>Sign in</h2>
+				</div>
+				<div class="auth__block">
+                    <form action="auth.php" method="post">
+                        <div class="auth__block auth__info">
+                            <input type="text" name="login" placeholder="Enter a Login" required>
+                            <input type="password" name="password" placeholder="Enter a Password" required>
+                            <div class="auth__content content">
+                                <a href="#forgot" class="forgot">Forgot password?</a>
+                                <a href="#reg" class="registration">Sign up</a>
+                            </div>
+                        </div>
+                        <div class="auth__block">
+                            <button class="auth__button" type="submit">
+                                Sign in
+                            </button>
+                        </div>
+                    </form>
+                </div>
+			</div>
+		</div>
+	</section>
+	<section class="reg" id="reg">
+		<div class="reg__body">
+			<div class="reg__blocks">
+				<div class="reg__block">
+					<span class="close">&times;</span>
+					<h2>Sign up</h2>
+				</div>
+				<div class="reg__block">
+                    <form action="check.php" method="post">
+                        <div class="reg__block reg__info">
+                            <input type="text" name="login" placeholder="Enter a Login" required>
+                            <input type="text" name="fullname" placeholder="Enter a Name" required>
+                            <input type="email" name="email" placeholder="Enter a E-mail" required>
+                            <input type="password" name="password" placeholder="Enter a Password" required>
+                            <div class="reg__content content">
+                                <span>Have an account?</span><a href="#" class="authbtn">Sign in</a>
+                            </div>
+                        </div>
+                        <div class="reg__block">
+                            <button class="reg__button" type="submit">
+                                Sign up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+			</div>
+		</div>
+	</section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
